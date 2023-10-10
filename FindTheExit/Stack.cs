@@ -51,23 +51,13 @@ namespace FindTheExit
         {
             Node<T> node = new Node<T>(element);
 
-
-
-            if (IsEmpty())
+            if (!IsEmpty())
             {
-                Head = node;
-                // Head.Previous = null;
+                node.Previous = Head; 
             }
-            else
-            {
-                node.Previous = Head;
-
-                //node.Previous = null;
-                Head = node;
-            }
-
+            
+            Head = node;
             Size++;
-
         }
 
         /// <summary>
