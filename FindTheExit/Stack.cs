@@ -7,6 +7,10 @@ using DoublyLinkedLists;
 
 namespace FindTheExit
 {
+    /// <summary>
+    /// Represent a stack using singly linkedlist.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     class Stack<T>
     {
         /// <summary>
