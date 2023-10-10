@@ -8,9 +8,9 @@ using DoublyLinkedLists;
 namespace FindTheExit
 {
     /// <summary>
-    /// Represent a stack using singly linkedlist.
+    /// Represent a generic stack using singly linkedlist.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Generic type parameter.</typeparam>
     class Stack<T>
     {
         /// <summary>
