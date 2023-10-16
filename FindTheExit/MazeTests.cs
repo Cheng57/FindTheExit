@@ -149,85 +149,85 @@ namespace TestLibrary
         }
 
         #region Constructor Tests
-        ///// <summary>
-        ///// Checks to make sure the constructor instantializes the appropriate variables
-        ///// </summary>
-        //[Test]
-        //public void Maze_Constructor_existing_maze_Test()
-        //{
-        //    Maze maze = new Maze(startingPoint.Row, startingPoint.Column, basicMaze);
+        /// <summary>
+        /// Checks to make sure the constructor instantializes the appropriate variables
+        /// </summary>
+        [Test]
+        public void Maze_Constructor_existing_maze_Test()
+        {
+            Maze maze = new Maze(startingPoint.Row, startingPoint.Column, basicMaze);
 
-        //    Assert.That(maze, Is.Not.Null);
-        //    Assert.That(maze.RowLength, Is.EqualTo(basicMaze.Length));
-        //    Assert.That(maze.ColumnLength, Is.EqualTo(basicMaze[0].Length));
-        //    Assert.That(maze.StartingPoint.Row, Is.EqualTo(startingPoint.Row));
-        //    Assert.That(maze.StartingPoint.Column, Is.EqualTo(startingPoint.Column));
+            Assert.That(maze, Is.Not.Null);
+            Assert.That(maze.RowLength, Is.EqualTo(basicMaze.Length));
+            Assert.That(maze.ColumnLength, Is.EqualTo(basicMaze[0].Length));
+            Assert.That(maze.StartingPoint.Row, Is.EqualTo(startingPoint.Row));
+            Assert.That(maze.StartingPoint.Column, Is.EqualTo(startingPoint.Column));
 
-        //    char[][] existingMaze = maze.GetMaze();
+            char[][] existingMaze = maze.GetMaze();
 
-        //    for (int i = 0; i < existingMaze.Length; i++)
-        //    {
-        //        for (int k = 0; k < existingMaze[i].Length; k++)
-        //        {
-        //            Assert.That(existingMaze[i][k], Is.EqualTo(basicMaze[i][k]));
-        //        }
-        //    }
-        //}
+            for (int i = 0; i < existingMaze.Length; i++)
+            {
+                for (int k = 0; k < existingMaze[i].Length; k++)
+                {
+                    Assert.That(existingMaze[i][k], Is.EqualTo(basicMaze[i][k]));
+                }
+            }
+        }
 
-        ///// <summary>
-        ///// If the existing maze starts on the exit, throw an exception
-        ///// </summary>
-        //[Test]
-        //public void Maze_Constructor_existingMaze_throws_error_on_Exit_as_starting_point_Test()
-        //{
-        //    Maze maze;
-        //    Assert.That(() => maze = new Maze(endingPoint.Row, endingPoint.Column, basicMaze), Throws.Exception.TypeOf<ApplicationException>());
-        //}
-        ///// <summary>
-        ///// If the existing maze starts in a wall, throw an exception
-        ///// </summary>
-        //[Test]
-        //public void Maze_Constructor_existingMaze_throws_error_on_Wall_as_starting_point_Test()
-        //{
-        //    Maze maze;
-        //    Assert.That(() => maze = new Maze(0, 0, basicMaze), Throws.Exception.TypeOf<ApplicationException>());
-        //}
-        ///// <summary>
-        ///// If the existing maze has an invalid Row, throw an exception
-        ///// </summary>
-        //[Test]
-        //public void Maze_Constructor_existingMaze_throws_error_on_negative_row_Test()
-        //{
-        //    Maze maze;
-        //    Assert.That(() => maze = new Maze(-1, startingPoint.Column, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
-        //}
-        ///// <summary>
-        ///// If the existing maze has an invalid Column, throw an exception
-        ///// </summary>
-        //[Test]
-        //public void Maze_Constructor_existingMaze_throws_error_on_negative_column_Test()
-        //{
-        //    Maze maze;
-        //    Assert.That(() => maze = new Maze(startingPoint.Row, -1, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
-        //}
-        ///// <summary>
-        ///// If the existing maze has an invalid Row, throw an exception
-        ///// </summary>
-        //[Test]
-        //public void Maze_Constructor_existingMaze_throws_error_on_row_value_greater_than_maze_Test()
-        //{
-        //    Maze maze;
-        //    Assert.That(() => maze = new Maze(basicMaze.Length, startingPoint.Column, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
-        //}
-        ///// <summary>
-        ///// If the existing maze has an invalid Column, throw an exception
-        ///// </summary>
-        //[Test]
-        //public void Maze_Constructor_existingMaze_throws_error_on_column_value_greater_than_maze_Test()
-        //{
-        //    Maze maze;
-        //    Assert.That(() => maze = new Maze(startingPoint.Row, basicMaze[0].Length, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
-        //}
+        /// <summary>
+        /// If the existing maze starts on the exit, throw an exception
+        /// </summary>
+        [Test]
+        public void Maze_Constructor_existingMaze_throws_error_on_Exit_as_starting_point_Test()
+        {
+            Maze maze;
+            Assert.That(() => maze = new Maze(endingPoint.Row, endingPoint.Column, basicMaze), Throws.Exception.TypeOf<ApplicationException>());
+        }
+        /// <summary>
+        /// If the existing maze starts in a wall, throw an exception
+        /// </summary>
+        [Test]
+        public void Maze_Constructor_existingMaze_throws_error_on_Wall_as_starting_point_Test()
+        {
+            Maze maze;
+            Assert.That(() => maze = new Maze(0, 0, basicMaze), Throws.Exception.TypeOf<ApplicationException>());
+        }
+        /// <summary>
+        /// If the existing maze has an invalid Row, throw an exception
+        /// </summary>
+        [Test]
+        public void Maze_Constructor_existingMaze_throws_error_on_negative_row_Test()
+        {
+            Maze maze;
+            Assert.That(() => maze = new Maze(-1, startingPoint.Column, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
+        }
+        /// <summary>
+        /// If the existing maze has an invalid Column, throw an exception
+        /// </summary>
+        [Test]
+        public void Maze_Constructor_existingMaze_throws_error_on_negative_column_Test()
+        {
+            Maze maze;
+            Assert.That(() => maze = new Maze(startingPoint.Row, -1, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
+        }
+        /// <summary>
+        /// If the existing maze has an invalid Row, throw an exception
+        /// </summary>
+        [Test]
+        public void Maze_Constructor_existingMaze_throws_error_on_row_value_greater_than_maze_Test()
+        {
+            Maze maze;
+            Assert.That(() => maze = new Maze(basicMaze.Length, startingPoint.Column, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
+        }
+        /// <summary>
+        /// If the existing maze has an invalid Column, throw an exception
+        /// </summary>
+        [Test]
+        public void Maze_Constructor_existingMaze_throws_error_on_column_value_greater_than_maze_Test()
+        {
+            Maze maze;
+            Assert.That(() => maze = new Maze(startingPoint.Row, basicMaze[0].Length, basicMaze), Throws.Exception.TypeOf<IndexOutOfRangeException>());
+        }
 
         /// <summary>
         /// Checks to make sure the constructor instantializes the appropriate variables from the file
@@ -258,20 +258,20 @@ namespace TestLibrary
 
         #endregion
 
-        //        #region PrintMaze()
-        //        ///// <summary>
-        //        ///// Tests PrintMaze() returns a string version of the maze.
-        //        ///// </summary>
-        //        [Test]
-        //        public void PrintMaze_Test()
-        //        {
-        //            Maze maze = new Maze(startingPoint.Row, startingPoint.Column, basicMaze);
+        #region PrintMaze()
+        ///// <summary>
+        ///// Tests PrintMaze() returns a string version of the maze.
+        ///// </summary>
+        [Test]
+        public void PrintMaze_Test()
+        {
+            Maze maze = new Maze(startingPoint.Row, startingPoint.Column, basicMaze);
 
-        //            String mazeOutput = maze.PrintMaze();
+            String mazeOutput = maze.PrintMaze();
 
-        //            Assert.That(mazeOutput, Is.EqualTo(basicMazeOutput));
-        //        }
-        //        #endregion
+            Assert.That(mazeOutput, Is.EqualTo(basicMazeOutput));
+        }
+        #endregion
 
         //        #region DepthFirstSearch()
         //        ///// <summary>
