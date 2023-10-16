@@ -12,9 +12,6 @@ namespace FindTheExit
 
     class Maze
     {
-        //private int rowLength;
-        //private int columnLength;
-        //private Point startingPoint;
         private char[][] charMaze;
 
         public Point StartingPoint
@@ -45,6 +42,7 @@ namespace FindTheExit
                 string line;
                 int row = 0;
 
+                //Add 'line = reader.ReadLine()' in the while condition statement so that it will read line by line each loop.
                 while ((line = reader.ReadLine()) != null)
                 {
                     if (row == 0)
@@ -92,6 +90,54 @@ namespace FindTheExit
         public char[][] GetMaze()
         {
             return charMaze;
+        }
+
+        public Maze(int startingRow, int startingColumn, char[][] existingMaze)
+        {
+            if (startingRow < 0 || startingColumn < 0)
+            {
+                throw new IndexOutOfRangeException("Negative startingRow or negative startingColumn is not allowed.");
+            }
+
+            //Starting point is on the Exit that is represented by the character E.
+            if (existingMaze[startingRow][startingColumn] == 'E')
+            {
+                throw new ApplicationException("Starting point is not allowed to be on the exit.");
+            }
+
+            //Starting point is on the Wall that is represented by the character W.
+            if (existingMaze[startingRow][startingColumn] == 'W')
+            {
+                throw new ApplicationException("Starting point is not allowed to be on the wall.");
+            }
+
+            StartingPoint = new Point(startingRow, startingColumn);
+
+            RowLength = existingMaze.Length;
+            ColumnLength = existingMaze[0].Length;
+
+            charMaze = existingMaze;
+        }
+
+        public string PrintMaze()
+        {
+            string mazeOutput = "";
+
+            for (int i = 0; i < RowLength; i++)
+            {
+                for (int j = 0; j < ColumnLength; j++)
+                {
+                    mazeOutput += charMaze[i][j];
+                }
+
+                // No '\n' added after the last iteration of the inner loop.
+                if (i < RowLength - 1)
+                {
+                    mazeOutput += "\n";
+                }
+            }
+
+            return mazeOutput;
         }
     }
 }
