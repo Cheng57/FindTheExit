@@ -1,1 +1,14 @@
 .vs/FindTheExit/v16/.suo
+.vs/FindTheExit/v16/TestStore/1/003.testlog
+.vs/FindTheExit/v16/TestStore/1/testlog.manifest
+.vs/FindTheExit/v16/TestStore/2/
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+FindTheExit/bin/Debug/FindTheExit.exe
+FindTheExit/bin/Debug/FindTheExit.pdb
+FindTheExit/bin/Debug/nunit_random_seed.tmp
+FindTheExit/obj/Debug/FindTheExit.exe
+FindTheExit/obj/Debug/FindTheExit.pdb
+FindTheExit/obj/Release/
+.vs/FindTheExit/v16/TestStore/1/002.testlog
+FindTheExit/MazeTests.cs
