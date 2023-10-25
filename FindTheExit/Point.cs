@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FindTheExit
 {
+    /// <summary>
+    /// Represents a point.
+    /// </summary>
     class Point
     {
         /// <summary>
